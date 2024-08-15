@@ -5,21 +5,141 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+.loader {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: inline-block;
+	border-top: 4px solid #FFF;
+	border-right: 4px solid transparent;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+	content: '';  
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border-left: 4px solid #FF3D00;
+	border-bottom: 4px solid transparent;
+	animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+  body {
+	font-family: Montserrat, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #2e2f42;
+  }
+  
+  .container {
+	padding: 10px;
+	margin: 0 auto;
+  }
+  
+  /* ~~~~~~~form~~~~~~~~ */
+  #search-form-js {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+  }
+  
+  .search-video-input {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	width: 272px;
+	height: 40px;
+	border-radius: 4px;
+	border: 1px solid #808080;
+  
+	font-size: 16px;
+	font-weight: 400;
+  }
+  
+  .search-video-input:hover,
+  .search-video-input:focus {
+	border: 1px solid #000000;
+  }
+  
+  .enter-name-btn {
+	padding: 8px 16px 8px 16px;
+	border-radius: 8px;
+	background-color: #4e75ff;
+	border: 1px solid #4e75ff;
+  
+	font-size: 16px;
+	font-weight: 500;
+	color: #ffffff;
+  }
+  
+  .enter-name-btn:hover,
+  .enter-name-btn:focus {
+	background-color: #6c8cff;
+  }
+  
+  /* ~~~~~~~form~~~~~~~~ */
+  
+  /* ~~~~~~~GALLERY~~~~~~~~ */
+  #list-result-js {
+	margin-top: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	justify-content: center;
+  }
+  
+  .video-list-item {
+	width: 360px;
+	border: 1px solid #808080;
+  }
+  
+  .video_item {
+	width: 360px;
+	height: 200px;
+	object-fit: cover;
+  }
+  
+  .video-info-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 28px;
+	background-color: #fff;
+  }
+  
+  .video-info-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  }
+  
+  .video_info {
+	font-weight: 600;
+	line-height: 133%;
+	letter-spacing: 0.04em;
+	color: #2e2f42;
+  }
+  
+  .video_statistics {
+	line-height: 200%;
+	letter-spacing: 0.04em;
+	color: #2e2f42;
+  }
+  /* ~~~~~~~GALLERY~~~~~~~~ */
