@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Search-from-Pixabay-2/",
+    "build": "vite build --base=/sp-SearchVideoPixabay-vite/",
     "preview": "vite preview"
   },
   "devDependencies": {
